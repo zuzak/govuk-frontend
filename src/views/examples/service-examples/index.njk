@@ -1,0 +1,489 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+<div class="govuk-o-grid govuk-!-mt-r9">
+  <div class="govuk-o-grid__item govuk-o-grid__item--two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      <span class="govuk-caption-xl">Service examples</span>
+      GOV.UK Frontend
+    </h1>
+
+    <!-- Headings -->
+
+    <section>
+      <div>
+        <h2 class="govuk-heading-l govuk-!-pb-r4" style="border-bottom: 4px solid;">Register to vote</h2>
+      </div>
+
+
+      <a href="#" class="govuk-c-back-link">Back</a>
+
+      <div class="govuk-o-content govuk-!-pt-r7 govuk-!-pb-r7">
+
+      <fieldset class="govuk-c-fieldset">
+        <legend class="govuk-c-fieldset__legend">
+          <h1 class="govuk-heading-xl">What is your nationality?</h1>
+          <span class="govuk-c-fieldset__hint">Select all options that are relevant to you</span>
+        </legend>
+
+        <div class="govuk-c-radio">
+          <input class="govuk-c-radio__input" id="radio-1" name="radio-group" type="radio" value="waste-animal"><label class="govuk-c-label govuk-c-radio__label" for="radio-1">
+          British (including English, Scottish, Welsh and Northern Irish)
+        </label>
+        </div>
+        <div class="govuk-c-radio">
+          <input class="govuk-c-radio__input" id="custom-id" name="radio-group" type="radio" value="waste-mines"><label class="govuk-c-label govuk-c-radio__label" for="custom-id">
+          Irish
+        </label>
+        </div>
+        <div class="govuk-c-radio">
+          <input class="govuk-c-radio__input" id="radio-3" name="radio-group" type="radio" value="waste-farm"><label class="govuk-c-label govuk-c-radio__label" for="radio-3">
+          Citizen of a different country
+        </label>
+        </div>
+
+
+      </fieldset>
+
+      <details class="govuk-c-details">
+        <summary class="govuk-c-details__summary">
+          <span class="govuk-c-details__summary-text">
+            Help with nationality
+          </span>
+        </summary>
+        <div class="govuk-c-border govuk-c-border--left-narrow">
+          <div class="govuk-c-details__text">
+            <p class="govuk-body">If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card.</p>
+
+            <p class="govuk-body">We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post. This could delay your name getting on the electoral register.</p>
+
+            <p class="govuk-body"><a href="">I can’t provide my nationality</a></p>
+
+          </div>
+        </div>
+      </details>
+
+      <input value="Continue" type="submit" class="govuk-c-button">
+
+
+      </div>
+
+
+
+    </section>
+
+    <hr class="govuk-!-mt-r0 govuk-!-mb-r6">
+
+    <section>
+
+      <a href="#" class="govuk-c-back-link">Back</a>
+
+      <div class="govuk-o-content govuk-!-pt-r7 govuk-!-pb-r7">
+
+      <fieldset class="govuk-c-fieldset">
+        <legend class="govuk-c-fieldset__legend">
+          <h1 class="govuk-heading-xl">What is your date of birth?</h1>
+          <span class="govuk-c-fieldset__hint">For example, 31 3 1980</span>
+        </legend>  <div class="govuk-c-date-input" id="dob">
+          <div class="govuk-c-date-input__item govuk-c-date-input__item--day">
+            <label class="govuk-c-label govuk-c-date-input__label" for="dob-day">
+        Day
+      </label>
+      <input class="govuk-c-input govuk-c-date-input__input undefined" id="dob-day" name="dob-day" type="text">
+      </div>
+          <div class="govuk-c-date-input__item govuk-c-date-input__item--month">
+            <label class="govuk-c-label govuk-c-date-input__label" for="dob-month">
+        Month
+      </label>
+      <input class="govuk-c-input govuk-c-date-input__input undefined" id="dob-month" name="dob-month" type="text">
+      </div>
+          <div class="govuk-c-date-input__item govuk-c-date-input__item--year">
+            <label class="govuk-c-label govuk-c-date-input__label" for="dob-year">
+        Year
+      </label>
+      <input class="govuk-c-input govuk-c-date-input__input undefined" id="dob-year" name="dob-year" type="text">
+      </div>
+        </div>
+
+      </fieldset>
+
+      <details class="govuk-c-details">
+        <summary class="govuk-c-details__summary">
+          <span class="govuk-c-details__summary-text">
+            Help with date of birth
+          </span>
+        </summary>
+        <div class="govuk-c-border govuk-c-border--left-narrow">
+          <div class="govuk-c-details__text">
+            <p class="govuk-body">If you don’t know your exact date of birth, use the one you put on official documents (for example, your passport or driving licence).</p>
+
+            <p class="govuk-body">If you can’t provide your date of birth you may have to send copies of identity documents through the post. This could delay your name getting on the electoral register.</p>
+
+            <p class="govuk-body"><a href="">I can’t provide my date of birth</a></p>
+
+          </div>
+        </div>
+      </details>
+
+      <input value="Continue" type="submit" class="govuk-c-button">
+
+
+      </div>
+
+    </section>
+
+
+    <hr class="govuk-!-mt-r0 govuk-!-mb-r6">
+
+    <section>
+
+      <a href="#" class="govuk-c-back-link">Back</a>
+
+      <div class="govuk-o-content govuk-!-pt-r7 govuk-!-pb-r7">
+
+      <fieldset class="govuk-c-fieldset">
+        <legend class="govuk-c-fieldset__legend">
+          <h1 class="govuk-heading-xl">What is your full name?</h1>
+          <span class="govuk-c-fieldset__hint">Enter all your names in full - don't use initials</span>
+        </legend>
+
+
+        <label class="govuk-c-label" for="input-1">
+          First name
+        </label>
+        <input class="govuk-c-input" id="input-1" name="test-name" type="text">
+
+        <label class="govuk-c-label" for="input-1">
+          Middle names
+        </label>
+        <input class="govuk-c-input" id="input-1" name="test-name" type="text">
+
+        <label class="govuk-c-label" for="input-1">
+          Last name
+        </label>
+        <input class="govuk-c-input" id="input-1" name="test-name" type="text">
+      </fieldset>
+
+
+      <fieldset class="govuk-c-fieldset">
+        <legend class="govuk-c-fieldset__legend">
+          <h2 class="govuk-heading-m">Have you ever changed your name?</h2>
+          <span class="govuk-c-fieldset__hint"> For example: marriage, deed poll</span>
+        </legend>
+
+        <div class="govuk-c-radio">
+          <input class="govuk-c-radio__input" id="radio-1" name="radio-group" type="radio" value="waste-animal"><label class="govuk-c-label govuk-c-radio__label" for="radio-1">
+          No, I haven’t changed my name
+        </label>
+        </div>
+        <div class="govuk-c-radio">
+          <input class="govuk-c-radio__input" id="custom-id" name="radio-group" type="radio" value="waste-mines"><label class="govuk-c-label govuk-c-radio__label" for="custom-id">
+          Yes, I changed my name
+        </label>
+        </div>
+        <div class="govuk-c-radio">
+          <input class="govuk-c-radio__input" id="radio-3" name="radio-group" type="radio" value="waste-farm"><label class="govuk-c-label govuk-c-radio__label" for="radio-3">
+          Prefer not to say
+        </label>
+        </div>
+
+
+      </fieldset>
+
+
+      <input value="Continue" type="submit" class="govuk-c-button">
+
+
+      </div>
+
+    </section>
+
+
+
+    <section>
+
+      <div>
+        <h2 class="govuk-heading-l govuk-!-pb-r4" style="border-bottom: 4px solid;">Make a SORN</h2>
+      </div>
+
+      <div class="govuk-c-phase-banner">
+        <p class="govuk-c-phase-banner__content"><strong class="govuk-c-tag govuk-c-phase-banner__content__tag ">
+        beta
+      </strong>
+      <span class="govuk-c-phase-banner__text">
+            This is a new service – your <a href="#">feedback</a> will help us to improve it.
+          </span>
+        </p>
+      </div>
+
+
+      <div class="govuk-o-content govuk-!-pt-r7 govuk-!-pb-r7">
+
+      <h1 class="govuk-heading-xl">Tell us you’re taking your vehicle off the road</h1>
+      <h2 class="govuk-heading-l">First we need your vehicle details</h2>
+
+      <p class="govuk-body">Check your name and address is correct on your V5C as it will be used to refund any payments once you declare SORN.</p>
+
+      <label class="govuk-c-label" for="input-1">
+        Please type the 16 digit reference number from your V11 reminder
+      </label>
+      <input class="govuk-c-input govuk-!-mb-r2" id="input-1" name="test-name" type="text">
+
+      <p class="govuk-body govuk-!-f-16"><a href="">Where to find this</a>
+
+      <details class="govuk-c-details">
+        <summary class="govuk-c-details__summary">
+          <span class="govuk-c-details__summary-text">
+            I don't have the V11 reminder, just the registration certificate or new keeper supplement
+          </span>
+        </summary>
+        <div class="govuk-c-border govuk-c-border--left-narrow">
+          <div class="govuk-c-details__text">
+            <fieldset class="govuk-c-fieldset">
+              <div class="govuk-c-radio">
+                <input class="govuk-c-radio__input" id="existing-id" name="radio-group" type="radio" value="Existing keeper" checked><label class="govuk-c-label govuk-c-radio__label" for="existing-id">
+                Existing keeper (using V5C document reference number)
+              </label>
+              </div>
+              <div class="govuk-c-radio">
+                <input class="govuk-c-radio__input" id="newkeeper-id" name="radio-group" type="radio" value="New keeper"><label class="govuk-c-label govuk-c-radio__label" for="newkeeper-id">
+                New keeper (using V5C/2 new keeper supplement document reference number)
+              </label>
+              </div>
+
+            </fieldset>
+
+
+            <label class="govuk-c-label" for="input-1">
+              Please type the 11 digit reference number from the front of your registration certificate
+            </label>
+            <input class="govuk-c-input govuk-!-mb-r2" id="input-1" name="test-name" type="text">
+
+            <p class="govuk-body govuk-!-f-16"><a href="">Where to find this</a></p>
+
+            <label class="govuk-c-label" for="input-1">
+              Add your registration number
+            </label>
+            <input class="govuk-c-input govuk-!-mb-r0" id="input-1" name="test-name" type="text">
+
+          </div>
+        </div>
+      </details>
+
+
+      <input value="Continue" type="submit" class="govuk-c-button">
+
+
+      </div>
+
+    </section>
+
+
+
+
+    <section>
+
+      <div>
+        <h2 class="govuk-heading-l govuk-!-pb-r4" style="border-bottom: 4px solid;">Pay leave for parents (Smart answers)</h2>
+      </div>
+
+      <div class="govuk-c-breadcrumb">
+        <ol class="govuk-c-breadcrumb__list">
+          <li class="govuk-c-breadcrumb__list-item">
+            <a class="govuk-c-breadcrumb__link" href="/section">Home</a>
+          </li>
+          <li class="govuk-c-breadcrumb__list-item">
+            <a class="govuk-c-breadcrumb__link" href="/section/sub-section">Childcare and parenting</a>
+          </li>
+          <li class="govuk-c-breadcrumb__list-item">
+            <a class="govuk-c-breadcrumb__link" href="/section/sub-section">Pregnancy and birth</a>
+          </li>
+        </ol>
+      </div>
+
+      <div class="govuk-o-content govuk-!-pt-r7 govuk-!-pb-r7">
+
+      <h1 class="govuk-heading-xl">Calculate your leave and pay when you have a child</h1>
+
+
+      <fieldset class="govuk-c-fieldset">
+        <legend class="govuk-c-fieldset__legend">
+          <h3 class="govuk-heading-m">Will you care for the child with a partner?</h3>
+        </legend>
+        <div class="govuk-c-radio">
+          <input class="govuk-c-radio__input" id="partner-yes" name="example" type="radio" value="yes">
+          <label class="govuk-c-label govuk-c-radio__label" for="partner-yes">
+            Yes
+          </label>
+        </div>
+        <div class="govuk-c-radio">
+          <input class="govuk-c-radio__input" id="partner-no" name="example" type="radio" value="no">
+          <label class="govuk-c-label govuk-c-radio__label" for="partner-no">
+            No
+          </label>
+        </div>
+      </fieldset>
+
+      <p class="govuk-body">The partner must be one of the following:</p>
+
+      <ul class="govuk-c-list govuk-c-list--bullet govuk-!-mb-r6">
+        <li>your husband, wife, civil partner or joint adopter</li>
+        <li>the child’s other parent</li>
+        <li>your partner (if they live with you and the child)</li>
+      </ul>
+
+
+      <input value="Next step" type="submit" class="govuk-c-button">
+
+      <p class="govuk-body-s">Last updated: 12 December 2017</p>
+
+
+
+      </div>
+
+    </section>
+
+  </div>
+</div>
+
+
+<div class="govuk-o-grid">
+
+  <div class="govuk-o-grid__item govuk-o-grid__item--full">
+    <h2 class="govuk-heading-l govuk-!-pb-r4" style="border-bottom: 4px solid;">Pay leave for parents (Smart answers)</h2>
+  </div>
+
+  <div class="govuk-o-grid__item govuk-o-grid__item--full">
+    <div class="govuk-c-breadcrumb">
+      <ol class="govuk-c-breadcrumb__list">
+        <li class="govuk-c-breadcrumb__list-item">
+          <a class="govuk-c-breadcrumb__link" href="/section">Home</a>
+        </li>
+        <li class="govuk-c-breadcrumb__list-item">
+          <a class="govuk-c-breadcrumb__link" href="/section/sub-section">Driving and transport</a>
+        </li>
+        <li class="govuk-c-breadcrumb__list-item">
+          <a class="govuk-c-breadcrumb__link" href="/section/sub-section">The Highway Code, road safety and vehicle rules</a>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+</div>
+
+<div class="govuk-o-content govuk-!-pt-r7 govuk-!-pb-r7">
+  <div class="govuk-o-grid">
+    <div class="govuk-o-grid__item govuk-o-grid__item--two-thirds">
+
+      <h1 class="govuk-heading-xl">Quad bikes: the rules</h1>
+
+      <p class="govuk-body">Quad bikes must be approved, registered, taxed and have an MOT (if needed) to be used on the road.</p>
+
+      <p class="govuk-body">Most quad bikes can’t be used on the road because they don’t meet road safety standards.</p>
+
+      <p class="govuk-body">Check with the manufacturer if your quad bike has been approved for road use. If your quad bike hasn’t been approved but meets road safety standards you can apply for ‘<a href="">type approval</a>’.</p>
+
+      <h2 class="govuk-heading-l">Rules for riding quad bikes</h2>
+      <h3 class="govuk-heading-m">Registering</h3>
+      <p class="govuk-body">You must register your quad bike with DVLA and the bike must have front and rear number plates.</p>
+
+      <h3 class="govuk-heading-m">MOT certificates</h3>
+      <p class="govuk-body">Quad bikes used on the road need a valid MOT certificate if they are more than 3 years old.</p>
+
+      <h3 class="govuk-heading-m">Driving licence</h3>
+      <p class="govuk-body">To drive a quad bike on the road you need to have a full car licence or a category B1 licence if it was issued before January 1997.</p>
+
+      <h3 class="govuk-heading-m">Insurance</h3>
+      <p class="govuk-body">You must have third party insurance to drive a quad bike on the road.</p>
+
+      <h3 class="govuk-heading-m">Passengers</h3>
+      <p class="govuk-body">A quad bike can only carry passengers if it is designed to do so and has the right number of seats. Check with the manufacturer if you’re not sure.</p>
+
+      <h3 class="govuk-heading-m">Crash helmets</h3>
+      <p class="govuk-body">Quad bike drivers and passengers in England, Scotland and Wales don’t have to wear crash helmets, but it’s recommended.</p>
+
+      <div class="govuk-c-legal-text govuk-!-mb-r6">
+        <span class="govuk-c-legal-text__icon govuk-o-circle" aria-hidden="true">!</span>
+        <strong class="govuk-c-legal-text__text">
+          <span class="govuk-c-legal-text__assistive">Warning</span>
+            You must wear a helmet if you’re driving a quad bike in Northern Ireland. You can be fined up to £500 if you don’t.
+        </strong>
+      </div>
+
+
+      <h2 class="govuk-heading-l">Using a quad bike off-road</h2>
+      <p class="govuk-body">You don’t need a driving licence to ride a quad bike off-road.</p>
+
+      <p class="govuk-body">You don’t have to tax and register your quad bike if you’re only going to use it off-road. However, there is an ‘off-road register’ where you can record the details of your off-road quad bike, which could help the police find it if it’s stolen.</p>
+
+      <h3 class="govuk-heading-m">Agricultural quad bikes</h3>
+      <p class="govuk-body">If you’re using a quad bike for agriculture, horticulture and forestry work you need to register it as a light agricultural vehicle.</p>
+
+      <h3 class="govuk-heading-m">Using an agricultural quad bike on the road</h3>
+      <p class="govuk-body">An agricultural quad bike used on the road doesn’t need an MOT, but must be registered and licensed for road use and must have a number plate and third party insurance.</p>
+
+      <p class="govuk-body">It will also need lights if it’s being used on the road after dark.</p>
+
+      <h3 class="govuk-heading-m">Vehicle tax</h3>
+      <p class="govuk-body">You don’t have to pay vehicle tax on quad bikes used for agriculture, horticulture or forestry.</p>
+
+      <p class="govuk-body">If you do have to pay tax, the class will depend on how you use your quad bike:</p>
+
+      <ul class="govuk-c-list govuk-c-list--bullet">
+        <li>limited use tax class for bikes used on the road</li>
+        <li>agricultural machine class for bikes not licensed for road use</li>
+      </ul>
+
+      <h3 class="govuk-heading-m">Passengers</h3>
+      <p class="govuk-body">Quad bikes used as light agricultural vehicles should be made with only a driver’s seat. They aren’t allowed to carry passengers.</p>
+
+
+      <h3 class="govuk-heading-m">More information</h3>
+      <p class="govuk-body">Contact the Department of Transport for more information about quad bikes.</p>
+
+      <p class="govuk-body">International Vehicles and Standards
+      Department for Transport<br>
+      Zone 1/33<br>
+      Great Minster House<br>
+      33 Horseferry Road<br>
+      London<br>
+      SW1P 4DR
+      </p>
+      <p class="govuk-body">
+      International Vehicles and Standards<br>
+      <a href="#">ivs.enquiries@dft.gsi.gov.uk</a><br>
+      Telephone: 020 7944 2091<br>
+      Find out about call charges<br>
+      </p>
+    </div>
+
+    <div class="govuk-o-grid__item govuk-o-grid__item--one-third">
+      <!-- This needed a lot of modification for a list of links -->
+      <aside style="border-top: 10px solid #005ea5;" class="govuk-!-pt-r4">
+      <h3 class="govuk-heading-m govuk-!-mb-r2">The Highway Code, road safety and vehicle rules</h3>
+      <ul class="govuk-c-list govuk-!-f-16">
+        <li class="govuk-!-mb-r2"><a href="">Mobility scooters and powered wheelchairs: the rules</a></li>
+        <li class="govuk-!-mb-r2"><a href="" class="govuk-!-w-bold">More</a></li>
+      </ul>
+
+      <h3 class="govuk-heading-m govuk-!-pt-r2 govuk-!-mb-r2">Driving and transport</h3>
+      <ul class="govuk-c-list govuk-!-f-16">
+        <li class="govuk-!-mb-r2"><a href="">Riding a motorcycle, moped or motor tricycle</a></li>
+        <li class="govuk-!-mb-r2"><a href="">Apply for your first provisional driving licence</a></li>
+        <li class="govuk-!-mb-r2"><a href="">Tax your vehicle</a></li>
+        <li class="govuk-!-mb-r2"><a href="">Vehicle approval</a></li>
+        <li class="govuk-!-mb-r2"><a href="">Vehicle insurance</a></li>
+        <li class="govuk-!-mb-r2"><a href="">Vehicles exempt from vehicle tax</a></li>
+        <li class="govuk-!-mb-r2"><a href="" class="govuk-!-w-bold">More</a></li>
+      </ul>
+      </aside>
+    </div>
+  </div>
+  </div>
+
+</div>
+
+
+{% endblock %}
