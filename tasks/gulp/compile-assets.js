@@ -35,7 +35,13 @@ const errorHandler = function (error) {
 gulp.task('scss:compile', () => {
   let compile = gulp.src(configPaths.app + 'assets/scss/govuk-frontend.scss')
     .pipe(plumber(errorHandler))
-    .pipe(sass())
+    .pipe(sass({outputStyle: 'expanded',
+      includePaths: [
+        'node_modules/govuk_template_jinja/assets/stylesheets',
+        'node_modules/govuk_frontend_toolkit/stylesheets',
+        'node_modules/govuk-elements-sass/public/sass',
+        'node_modules']}))
+
     // minify css add vendor prefixes and normalize to compiled css
     .pipe(gulpif(isDist, postcss([
       autoprefixer,
