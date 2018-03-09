@@ -87,19 +87,10 @@ app.get('/', function (req, res) {
 app.get('/components/:component', function (req, res, next) {
   let componentName = req.params.component
 
-  // make variables available to nunjucks template
-  res.locals = {
+  res.render('component.njk', {
     data: getComponentData(componentName),
     name: componentName,
     title: titlecase(componentName)
-  }
-
-  res.render('component.njk', function (error, html) {
-    if (error) {
-      next(error)
-    } else {
-      res.send(html)
-    }
   })
 })
 
@@ -122,18 +113,21 @@ app.get('/components/:component/:example*?/preview', function (req, res, next) {
   let macroName = helperFunctions.componentNameToMacroName(componentName)
   let macroParameters = JSON.stringify(exampleConfig.data, null, '\t')
 
-  res.locals.componentView = env.renderString(
+  let componentView = env.renderString(
     `{% from '${componentName}/macro.njk' import ${macroName} %}
     {{ ${macroName}(${macroParameters}) }}`
   )
-  res.locals.componentData = componentData
 
   let bodyClasses = ''
   if (req.query.iframe) {
     bodyClasses = 'app-iframe-in-component-preview'
   }
 
-  res.render('component-preview', { bodyClasses })
+  res.render('component-preview', {
+    bodyClasses,
+    componentData,
+    componentView
+  })
 })
 
 // Example view
