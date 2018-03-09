@@ -5,14 +5,14 @@
 
 {% block content %}
   {{ govukBreadcrumbs({
-    "items": [
+    items: [
       { text: 'GOV.UK Frontend', href: '/' },
-      { text: componentNameHuman }
+      { text: title }
     ]
   }) }}
 
   <div class="govuk-o-main-wrapper">
-    <h1 class="govuk-heading-xl">{{ componentNameHuman }}</h1>
-    {{ showExamples(componentName, componentData) }}
+    <h1 class="govuk-heading-xl">{{ title }}</h1>
+    {{ showExamples(name, data) }}
   </div>
 {% endblock %}

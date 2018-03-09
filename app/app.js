@@ -88,9 +88,11 @@ app.get('/components/:component', function (req, res, next) {
   let componentName = req.params.component
 
   // make variables available to nunjucks template
-  res.locals.componentData = getComponentData(componentName)
-  res.locals.componentName = componentName
-  res.locals.componentNameHuman = titlecase(componentName)
+  res.locals = {
+    data: getComponentData(componentName),
+    name: componentName,
+    title: titlecase(componentName)
+  }
 
   res.render('component.njk', function (error, html) {
     if (error) {
