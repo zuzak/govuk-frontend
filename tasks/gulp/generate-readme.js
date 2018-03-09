@@ -31,7 +31,6 @@ gulp.task('generate:readme', () => {
   return gulp.src([configPath.src + '**/index.njk'])
   .pipe(data(file => {
     objectData.componentName = path.dirname(file.path).split(path.sep).slice(-1).toString()
-    objectData.componentPath = objectData.componentName
     try {
       let componentPath = path.join(configPath.src, objectData.componentName, `${objectData.componentName}.yaml`)
       let componentData = yaml.safeLoad(fs.readFileSync(componentPath, 'utf8'), {json: true})

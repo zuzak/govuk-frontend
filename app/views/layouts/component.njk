@@ -1,9 +1,7 @@
-{% set componentName = componentPath %}
 {% extends "layout-debug.njk" %}
 
 {% block content %}
 
-{% set componentName = componentPath %}
 {% set componentNameHuman = componentName | replace("-", " ") | capitalize %}
 {% set componentGuidanceLink = componentGuidanceLink | default('https://govuk-design-system-production.cloudapps.digital/components/' + componentName)%}
 {% set htmlMarkup %}

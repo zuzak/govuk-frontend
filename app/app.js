@@ -83,7 +83,7 @@ app.get('/components/:component', function (req, res, next) {
   // make variables available to nunjucks template
   let componentName = req.params.component
   res.locals.componentData = getComponentData(componentName)
-  res.locals.componentPath = componentName
+  res.locals.componentName = componentName
 
   res.render(`${componentName}/index`, function (error, html) {
     if (error) {
