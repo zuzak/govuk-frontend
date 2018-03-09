@@ -1,55 +1,16 @@
-# Tag
-
 ## Introduction
 
-Phase tags are mostly used inside phase banners as an indication of the state of a project. It’s possible to use them outside phase banners, for example as part of a service header.
+## Examples
 
-## Guidance
-
-Find out when to use the Tag component in your service in the [GOV.UK Design System](https://govuk-design-system-production.cloudapps.digital/components/tag).
-
-## Quick start examples
-
-### Component default
-
-[Preview the tag component](http://govuk-frontend-review.herokuapp.com/components/tag/preview)
-
-#### Markup
-
-    <strong class="govuk-c-tag">
-      alpha
-    </strong>
-
-#### Macro
-
-    {{ govukTag({
-      "text": "alpha"
-    }) }}
-
-### Tag--inactive
-
-[Preview the tag--inactive example](http://govuk-frontend-review.herokuapp.com/components/tag/inactive/preview)
-
-#### Markup
-
-    <strong class="govuk-c-tag govuk-c-tag--inactive">
-      alpha
-    </strong>
-
-#### Macro
-
-    {{ govukTag({
-      "text": "alpha",
-      "classes": "govuk-c-tag--inactive"
-    }) }}
+Find out when to use the component in your service in the [GOV.UK Design System](https://govuk-design-system-production.cloudapps.digital/components/) .
 
 ## Dependencies
 
-To consume the tag component you must be running npm version 5 or above.
+To consume the component you must be running npm version 5 or above.
 
 ## Installation
 
-    npm install --save @govuk-frontend/tag
+    npm install --save @govuk-frontend/
 
 ## Requirements
 
@@ -157,11 +118,11 @@ Below is an example setup using express configure views:
 
 To check whether you have the latest version of the button run:
 
-    npm outdated @govuk-frontend/tag
+    npm outdated @govuk-frontend/
 
 To update the latest version run:
 
-    npm update @govuk-frontend/tag
+    npm update @govuk-frontend/
 
 ## Contribution
 

@@ -1,126 +1,16 @@
-# Select
-
 ## Introduction
 
-The HTML `<select>` element represents a control that provides a menu of options.
+## Examples
 
-## Guidance
-
-Find out when to use the Select component in your service in the [GOV.UK Design System](https://govuk-design-system-production.cloudapps.digital/components/select).
-
-## Quick start examples
-
-### Component default
-
-[Preview the select component](http://govuk-frontend-review.herokuapp.com/components/select/preview)
-
-#### Markup
-
-    <div class="govuk-o-form-group"><label class="govuk-c-label" for="select-1">
-      Label text goes here
-
-    </label>
-    <select class="govuk-c-select" id="select-1" name="select-1">
-
-        <option value="1">GOV.UK frontend option 1</option>
-
-        <option value="2" selected>GOV.UK frontend option 2</option>
-
-        <option value="3" disabled>GOV.UK frontend option 3</option>
-
-      </select>
-    </div>
-
-#### Macro
-
-    {{ govukSelect({
-      "id": "select-1",
-      "name": "select-1",
-      "label": {
-        "html": "Label text goes here"
-      },
-      "items": [
-        {
-          "value": 1,
-          "text": "GOV.UK frontend option 1"
-        },
-        {
-          "value": 2,
-          "text": "GOV.UK frontend option 2",
-          "selected": true
-        },
-        {
-          "value": 3,
-          "text": "GOV.UK frontend option 3",
-          "disabled": true
-        }
-      ]
-    }) }}
-
-### Select--with-hint-text-and-error
-
-[Preview the select--with-hint-text-and-error example](http://govuk-frontend-review.herokuapp.com/components/select/with-hint-text-and-error/preview)
-
-#### Markup
-
-    <div class="govuk-o-form-group govuk-o-form-group--error"><label class="govuk-c-label" for="select-2">
-      Label text goes here
-
-      <span class="govuk-c-label__hint">
-        Hint text goes here
-      </span>
-
-      <span class="govuk-c-error-message">
-      Error message goes here
-    </span>
-
-    </label>
-    <select class="govuk-c-select govuk-c-select--error" id="select-2" name="select-2">
-
-        <option value="1">GOV.UK frontend option 1</option>
-
-        <option value="2">GOV.UK frontend option 2</option>
-
-        <option value="3">GOV.UK frontend option 3</option>
-
-      </select>
-    </div>
-
-#### Macro
-
-    {{ govukSelect({
-      "id": "select-2",
-      "name": "select-2",
-      "label": {
-        "hintText": "Hint text goes here",
-        "text": "Label text goes here"
-      },
-      "errorMessage": {
-        "text": "Error message goes here"
-      },
-      "items": [
-        {
-          "value": 1,
-          "text": "GOV.UK frontend option 1"
-        },
-        {
-          "value": 2,
-          "text": "GOV.UK frontend option 2"
-        },
-        {
-          "value": 3,
-          "text": "GOV.UK frontend option 3"
-        }
-      ]
-    }) }}
+Find out when to use the component in your service in the [GOV.UK Design System](https://govuk-design-system-production.cloudapps.digital/components/) .
 
 ## Dependencies
 
-To consume the select component you must be running npm version 5 or above.
+To consume the component you must be running npm version 5 or above.
 
 ## Installation
 
-    npm install --save @govuk-frontend/select
+    npm install --save @govuk-frontend/
 
 ## Requirements
 
@@ -312,11 +202,11 @@ Below is an example setup using express configure views:
 
 To check whether you have the latest version of the button run:
 
-    npm outdated @govuk-frontend/select
+    npm outdated @govuk-frontend/
 
 To update the latest version run:
 
-    npm update @govuk-frontend/select
+    npm update @govuk-frontend/
 
 ## Contribution
 

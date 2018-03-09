@@ -1,78 +1,16 @@
-# Details
-
 ## Introduction
 
-Component for conditionally revealing content, using the details HTML element.
+## Examples
 
-## Guidance
-
-Find out when to use the Details component in your service in the [GOV.UK Design System](https://govuk-design-system-production.cloudapps.digital/components/details).
-
-## Quick start examples
-
-### Component default
-
-[Preview the details component](http://govuk-frontend-review.herokuapp.com/components/details/preview)
-
-#### Markup
-
-    <details class="govuk-c-details">
-      <summary class="govuk-c-details__summary">
-        <span class="govuk-c-details__summary-text">
-          Help with nationality
-        </span>
-      </summary>
-      <div class="govuk-c-details__text">
-        We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post.
-      </div>
-    </details>
-
-#### Macro
-
-    {{ govukDetails({
-      "summaryText": "Help with nationality",
-      "text": "We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post."
-    }) }}
-
-### Details--with-html
-
-[Preview the details--with-html example](http://govuk-frontend-review.herokuapp.com/components/details/with-html/preview)
-
-#### Markup
-
-    <details class="govuk-c-details">
-      <summary class="govuk-c-details__summary">
-        <span class="govuk-c-details__summary-text">
-          Where to find your National Insurance Number
-        </span>
-      </summary>
-      <div class="govuk-c-details__text">
-        Your National Insurance number can be found on
-    <ul>
-      <li>your National Insurance card</li>
-      <li>your payslip</li>
-      <li>P60</li>
-      <li>benefits information</li>
-      <li>tax return</li>
-    </ul>
-
-      </div>
-    </details>
-
-#### Macro
-
-    {{ govukDetails({
-      "summaryText": "Where to find your National Insurance Number",
-      "html": "Your National Insurance number can be found on\n<ul>\n  <li>your National Insurance card</li>\n  <li>your payslip</li>\n  <li>P60</li>\n  <li>benefits information</li>\n  <li>tax return</li>\n</ul>\n"
-    }) }}
+Find out when to use the component in your service in the [GOV.UK Design System](https://govuk-design-system-production.cloudapps.digital/components/) .
 
 ## Dependencies
 
-To consume the details component you must be running npm version 5 or above.
+To consume the component you must be running npm version 5 or above.
 
 ## Installation
 
-    npm install --save @govuk-frontend/details
+    npm install --save @govuk-frontend/
 
 ## Requirements
 
@@ -204,11 +142,11 @@ Below is an example setup using express configure views:
 
 To check whether you have the latest version of the button run:
 
-    npm outdated @govuk-frontend/details
+    npm outdated @govuk-frontend/
 
 To update the latest version run:
 
-    npm update @govuk-frontend/details
+    npm update @govuk-frontend/
 
 ## Contribution
 

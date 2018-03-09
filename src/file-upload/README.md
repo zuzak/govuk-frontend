@@ -1,135 +1,16 @@
-# File upload
-
 ## Introduction
 
-The HTML `<input>` element with type="file" lets a user pick one or more files, to upload to a server.
+## Examples
 
-## Guidance
-
-Find out when to use the File upload component in your service in the [GOV.UK Design System](https://govuk-design-system-production.cloudapps.digital/components/file-upload).
-
-## Quick start examples
-
-### Component default
-
-[Preview the file-upload component](http://govuk-frontend-review.herokuapp.com/components/file-upload/preview)
-
-#### Markup
-
-    <div class="govuk-o-form-group"><label class="govuk-c-label" for="file-upload-1">
-      Upload a file
-
-    </label>
-    <input type="file" id="file-upload-1" name="file-upload-1" class="govuk-c-file-upload">
-    </div>
-
-#### Macro
-
-    {{ govukFileUpload({
-      "id": "file-upload-1",
-      "name": "file-upload-1",
-      "label": {
-        "text": "Upload a file"
-      }
-    }) }}
-
-### File-upload--with-hint-text
-
-[Preview the file-upload--with-hint-text example](http://govuk-frontend-review.herokuapp.com/components/file-upload/with-hint-text/preview)
-
-#### Markup
-
-    <div class="govuk-o-form-group"><label class="govuk-c-label" for="file-upload-2">
-      Upload your photo
-
-      <span class="govuk-c-label__hint">
-        Your photo may be in your Pictures, Photos, Downloads or Desktop folder. Or in an app like iPhoto.
-      </span>
-
-    </label>
-    <input type="file" id="file-upload-2" name="file-upload-2" class="govuk-c-file-upload">
-    </div>
-
-#### Macro
-
-    {{ govukFileUpload({
-      "id": "file-upload-2",
-      "name": "file-upload-2",
-      "label": {
-        "text": "Upload your photo",
-        "hintText": "Your photo may be in your Pictures, Photos, Downloads or Desktop folder. Or in an app like iPhoto."
-      }
-    }) }}
-
-### File-upload--with-error-message
-
-[Preview the file-upload--with-error-message example](http://govuk-frontend-review.herokuapp.com/components/file-upload/with-error-message/preview)
-
-#### Markup
-
-    <div class="govuk-o-form-group govuk-o-form-group--error"><label class="govuk-c-label" for="file-upload-3">
-      Upload a file
-
-      <span class="govuk-c-label__hint">
-        Your photo may be in your Pictures, Photos, Downloads or Desktop folder. Or in an app like iPhoto.
-      </span>
-
-      <span class="govuk-c-error-message">
-      Error message goes here
-    </span>
-
-    </label>
-    <input type="file" id="file-upload-3" name="file-upload-3" class="govuk-c-file-upload govuk-c-file-upload--error">
-    </div>
-
-#### Macro
-
-    {{ govukFileUpload({
-      "id": "file-upload-3",
-      "name": "file-upload-3",
-      "label": {
-        "text": "Upload a file",
-        "hintText": "Your photo may be in your Pictures, Photos, Downloads or Desktop folder. Or in an app like iPhoto."
-      },
-      "errorMessage": {
-        "text": "Error message goes here"
-      }
-    }) }}
-
-### File-upload--with-value-and-attributes
-
-[Preview the file-upload--with-value-and-attributes example](http://govuk-frontend-review.herokuapp.com/components/file-upload/with-value-and-attributes/preview)
-
-#### Markup
-
-    <div class="govuk-o-form-group"><label class="govuk-c-label" for="file-upload-4">
-      Upload a photo
-
-    </label>
-    <input type="file" id="file-upload-4" name="file-upload-4" value="C:\fakepath\myphoto.jpg" class="govuk-c-file-upload" accept=".jpg, .jpeg, .png">
-    </div>
-
-#### Macro
-
-    {{ govukFileUpload({
-      "id": "file-upload-4",
-      "name": "file-upload-4",
-      "value": "C:\\fakepath\\myphoto.jpg",
-      "label": {
-        "text": "Upload a photo"
-      },
-      "attributes": {
-        "accept": ".jpg, .jpeg, .png"
-      }
-    }) }}
+Find out when to use the component in your service in the [GOV.UK Design System](https://govuk-design-system-production.cloudapps.digital/components/) .
 
 ## Dependencies
 
-To consume the file-upload component you must be running npm version 5 or above.
+To consume the component you must be running npm version 5 or above.
 
 ## Installation
 
-    npm install --save @govuk-frontend/file-upload
+    npm install --save @govuk-frontend/
 
 ## Requirements
 
@@ -273,11 +154,11 @@ Below is an example setup using express configure views:
 
 To check whether you have the latest version of the button run:
 
-    npm outdated @govuk-frontend/file-upload
+    npm outdated @govuk-frontend/
 
 To update the latest version run:
 
-    npm update @govuk-frontend/file-upload
+    npm update @govuk-frontend/
 
 ## Contribution
 

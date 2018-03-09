@@ -1,47 +1,16 @@
-# Phase banner
-
 ## Introduction
 
-A banner that indicates content is in alpha or beta phase with a description.
+## Examples
 
-## Guidance
-
-Find out when to use the Phase banner component in your service in the [GOV.UK Design System](https://govuk-design-system-production.cloudapps.digital/components/phase-banner).
-
-## Quick start examples
-
-### Component default
-
-[Preview the phase-banner component](http://govuk-frontend-review.herokuapp.com/components/phase-banner/preview)
-
-#### Markup
-
-    <div class="govuk-c-phase-banner">
-      <p class="govuk-c-phase-banner__content"><strong class="govuk-c-tag govuk-c-phase-banner__content__tag ">
-      alpha
-    </strong>
-    <span class="govuk-c-phase-banner__text">
-          This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.
-        </span>
-      </p>
-    </div>
-
-#### Macro
-
-    {{ govukPhaseBanner({
-      "tag": {
-        "text": "alpha"
-      },
-      "html": "This is a new service - your <a href=\"#\" class=\"govuk-link\">feedback</a> will help us to improve it."
-    }) }}
+Find out when to use the component in your service in the [GOV.UK Design System](https://govuk-design-system-production.cloudapps.digital/components/) .
 
 ## Dependencies
 
-To consume the phase-banner component you must be running npm version 5 or above.
+To consume the component you must be running npm version 5 or above.
 
 ## Installation
 
-    npm install --save @govuk-frontend/phase-banner
+    npm install --save @govuk-frontend/
 
 ## Requirements
 
@@ -161,11 +130,11 @@ Below is an example setup using express configure views:
 
 To check whether you have the latest version of the button run:
 
-    npm outdated @govuk-frontend/phase-banner
+    npm outdated @govuk-frontend/
 
 To update the latest version run:
 
-    npm update @govuk-frontend/phase-banner
+    npm update @govuk-frontend/
 
 ## Contribution
 

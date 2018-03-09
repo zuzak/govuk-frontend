@@ -14,18 +14,25 @@ const configPaths = require('../config/paths.json')
 function getComponentData (name) {
   let yamlPath = configPaths.src + `${name}/${name}.yaml`
 
+  console.log(yamlPath)
+
   try {
     return yaml.safeLoad(
       fs.readFileSync(yamlPath, 'utf8'), { json: true }
     )
   } catch (error) {
-    throw new Error(error)
+    throw error
   }
 }
 
 function titlecase (string) {
   string = string.replace('-', ' ')
   return string.charAt(0).toUpperCase() + string.slice(1)
+}
+
+function prettyPrint (data) {
+  // return JSON.stringify(data, null, 2).replace(/"([^"]+)":/g, '$1:')
+  return JSON.stringify(data, null, 2)
 }
 
 // Set up views
@@ -60,15 +67,6 @@ const server = app.listen(port, () => {
   console.log('Listening on port ' + port + '   url: http://localhost:' + port)
 })
 
-// Disallow search index indexing
-app.use(function (req, res, next) {
-  // none - Equivalent to noindex, nofollow
-  // noindex - Do not show this page in search results and do not show a "Cached" link in search results.
-  // nofollow - Do not follow the links on this page
-  res.setHeader('X-Robots-Tag', 'none')
-  next()
-})
-
 // Define routes
 
 // Index page - render the component list template
@@ -90,27 +88,51 @@ app.get('/', function (req, res) {
 })
 
 // Component 'README' page
-app.get('/components/:component', function (req, res, next) {
-  let componentName = req.params.component
+app.get('/components/:name', function (req, res, next) {
+  const name = req.params.name
+
+  const macroName = componentNameToMacroName(name)
+  const { examples } = getComponentData(name)
+
+  const extendedExamples = examples.map(example => {
+    console.log(example)
+    const data = example.data
+
+    const macroParameters = prettyPrint(data)
+
+    const snippet = (
+      `{% from '${name}/macro.njk' import ${macroName} %}
+
+{{ ${macroName}(${macroParameters}) }}`
+    )
+
+    const markup = env.renderString(snippet).trim()
+
+    return {
+      ...example,
+      markup,
+      snippet
+    }
+  })
 
   res.render('component.njk', {
-    data: getComponentData(componentName),
-    name: componentName,
-    macroName: componentNameToMacroName(componentName),
-    title: titlecase(componentName)
+    examples: extendedExamples,
+    name,
+    macroName,
+    title: titlecase(name)
   })
 })
 
 // Component example preview
-app.get('/components/:component/:example*?/preview', function (req, res, next) {
+app.get('/components/:name/:example*?/preview', function (req, res, next) {
   // Find the data for the specified example (or the default example)
-  let componentName = req.params.component
-  let componentData = getComponentData(componentName)
+  const componentName = req.params.name
+  const { examples } = getComponentData(componentName)
 
-  let requestedExampleName = req.params.example || 'default'
-  let exampleConfig = componentData.examples.find(
-    example => example.name === requestedExampleName
-  )
+  const requestedExampleName = req.params.example
+  const exampleConfig = examples.find(example => {
+    return example.name === requestedExampleName
+  })
 
   if (!exampleConfig) {
     next()
@@ -132,7 +154,7 @@ app.get('/components/:component/:example*?/preview', function (req, res, next) {
 
   res.render('component-preview', {
     bodyClasses,
-    componentData,
+    examples,
     componentView
   })
 })
@@ -153,28 +175,13 @@ app.get('/robots.txt', function (req, res) {
   res.send('User-agent: *\nDisallow: /')
 })
 
-// Since this is the last non-error-handling middleware, we assume 404, as nothing else responded.
+// Disallow search index indexing
 app.use(function (req, res, next) {
-  res.status(404)
-  res.format({
-    html: function () {
-      res.render('http-error', { error: 'Page not found', message: 'If you entered a web address please check it was correct.', url: req.url })
-    },
-    json: function () {
-      res.json({ error: 'Not found' })
-    },
-    default: function () {
-      res.type('txt').send('Not found')
-    }
-  })
+  // none - Equivalent to noindex, nofollow
+  // noindex - Do not show this page in search results and do not show a "Cached" link in search results.
+  // nofollow - Do not follow the links on this page
+  res.setHeader('X-Robots-Tag', 'none')
   next()
-})
-
-// Error-handling middleware, take the same form require an arity of 4.
-// When connect has an error, it will invoke ONLY error-handling middleware
-app.use(function (err, req, res, next) {
-  res.status(err.status || 500)
-  res.render('http-error', { error: 'Internal server error', message: err })
 })
 
 module.exports = server

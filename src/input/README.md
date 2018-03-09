@@ -1,108 +1,16 @@
-# Input
-
 ## Introduction
 
-A single-line text field.
+## Examples
 
-## Guidance
-
-Find out when to use the Input component in your service in the [GOV.UK Design System](https://govuk-design-system-production.cloudapps.digital/components/text-input).
-
-## Quick start examples
-
-### Component default
-
-[Preview the input component](http://govuk-frontend-review.herokuapp.com/components/input/preview)
-
-#### Markup
-
-    <div class="govuk-o-form-group"><label class="govuk-c-label" for="input-1">
-      National Insurance number
-
-    </label>
-    <input class="govuk-c-input" id="input-1" name="test-name" type="text">
-    </div>
-
-#### Macro
-
-    {{ govukInput({
-      "label": {
-        "text": "National Insurance number"
-      },
-      "id": "input-1",
-      "name": "test-name"
-    }) }}
-
-### Input--with-hint-text
-
-[Preview the input--with-hint-text example](http://govuk-frontend-review.herokuapp.com/components/input/with-hint-text/preview)
-
-#### Markup
-
-    <div class="govuk-o-form-group"><label class="govuk-c-label" for="input-2">
-      National insurance number
-
-      <span class="govuk-c-label__hint">
-        It’s on your National Insurance card, benefit letter, payslip or P60\. For example, ‘QQ 12 34 56 C’.
-      </span>
-
-    </label>
-    <input class="govuk-c-input" id="input-2" name="test-name-2" type="text">
-    </div>
-
-#### Macro
-
-    {{ govukInput({
-      "label": {
-        "text": "National insurance number",
-        "hintText": "It’s on your National Insurance card, benefit letter, payslip or P60\. For example, ‘QQ 12 34 56 C’."
-      },
-      "id": "input-2",
-      "name": "test-name-2"
-    }) }}
-
-### Input--with-error-message
-
-[Preview the input--with-error-message example](http://govuk-frontend-review.herokuapp.com/components/input/with-error-message/preview)
-
-#### Markup
-
-    <div class="govuk-o-form-group govuk-o-form-group--error"><label class="govuk-c-label" for="input-3">
-      National Insurance number
-
-      <span class="govuk-c-label__hint">
-        It’s on your <i>National Insurance card</i>, benefit letter, payslip or P60\. For example, ‘QQ 12 34 56 C’.
-      </span>
-
-      <span class="govuk-c-error-message">
-      Error message goes here
-    </span>
-
-    </label>
-    <input class="govuk-c-input govuk-c-input--error" id="input-3" name="test-name-3" type="text">
-    </div>
-
-#### Macro
-
-    {{ govukInput({
-      "label": {
-        "text": "National Insurance number",
-        "hintHtml": "It’s on your <i>National Insurance card</i>, benefit letter, payslip or P60\. For example, ‘QQ 12 34 56 C’."
-      },
-      "id": "input-3",
-      "name": "test-name-3",
-      "errorMessage": {
-        "text": "Error message goes here"
-      }
-    }) }}
+Find out when to use the component in your service in the [GOV.UK Design System](https://govuk-design-system-production.cloudapps.digital/components/) .
 
 ## Dependencies
 
-To consume the input component you must be running npm version 5 or above.
+To consume the component you must be running npm version 5 or above.
 
 ## Installation
 
-    npm install --save @govuk-frontend/input
+    npm install --save @govuk-frontend/
 
 ## Requirements
 
@@ -258,11 +166,11 @@ Below is an example setup using express configure views:
 
 To check whether you have the latest version of the button run:
 
-    npm outdated @govuk-frontend/input
+    npm outdated @govuk-frontend/
 
 To update the latest version run:
 
-    npm update @govuk-frontend/input
+    npm update @govuk-frontend/
 
 ## Contribution
 

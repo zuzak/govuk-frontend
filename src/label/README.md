@@ -1,92 +1,16 @@
-# Label
-
 ## Introduction
 
-Use labels for all form fields.
+## Examples
 
-## Quick start examples
-
-### Component default
-
-[Preview the label component](http://govuk-frontend-review.herokuapp.com/components/label/preview)
-
-#### Markup
-
-    <label class="govuk-c-label">
-      National Insurance number
-
-      <span class="govuk-c-label__hint">
-        It’s on your National Insurance card, benefit letter, payslip or P60\. For example, ‘QQ 12 34 56 C’.
-      </span>
-
-    </label>
-
-#### Macro
-
-    {{ govukLabel({
-      "text": "National Insurance number",
-      "hintText": "It’s on your National Insurance card, benefit letter, payslip or P60\. For example, ‘QQ 12 34 56 C’."
-    }) }}
-
-### Label--with bold text
-
-[Preview the label--with bold text example](http://govuk-frontend-review.herokuapp.com/components/label/with bold text/preview)
-
-#### Markup
-
-    <label class="govuk-c-label govuk-c-label--bold">
-      National Insurance number
-
-      <span class="govuk-c-label__hint">
-        It’s on your National Insurance card, benefit letter, payslip or P60\. For example, ‘QQ 12 34 56 C’.
-      </span>
-
-    </label>
-
-#### Macro
-
-    {{ govukLabel({
-      "classes": "govuk-c-label--bold",
-      "text": "National Insurance number",
-      "hintText": "It’s on your National Insurance card, benefit letter, payslip or P60\. For example, ‘QQ 12 34 56 C’."
-    }) }}
-
-### Label--with error message
-
-[Preview the label--with error message example](http://govuk-frontend-review.herokuapp.com/components/label/with error message/preview)
-
-#### Markup
-
-    <label class="govuk-c-label">
-      National Insurance number
-
-      <span class="govuk-c-label__hint">
-        It’s on your National Insurance card, benefit letter, payslip or P60\. For example, ‘QQ 12 34 56 C’.
-      </span>
-
-      <span class="govuk-c-error-message">
-      Error message goes here
-    </span>
-
-    </label>
-
-#### Macro
-
-    {{ govukLabel({
-      "text": "National Insurance number",
-      "hintText": "It’s on your National Insurance card, benefit letter, payslip or P60\. For example, ‘QQ 12 34 56 C’.",
-      "errorMessage": {
-        "text": "Error message goes here"
-      }
-    }) }}
+Find out when to use the component in your service in the [GOV.UK Design System](https://govuk-design-system-production.cloudapps.digital/components/) .
 
 ## Dependencies
 
-To consume the label component you must be running npm version 5 or above.
+To consume the component you must be running npm version 5 or above.
 
 ## Installation
 
-    npm install --save @govuk-frontend/label
+    npm install --save @govuk-frontend/
 
 ## Requirements
 
@@ -242,11 +166,11 @@ Below is an example setup using express configure views:
 
 To check whether you have the latest version of the button run:
 
-    npm outdated @govuk-frontend/label
+    npm outdated @govuk-frontend/
 
 To update the latest version run:
 
-    npm update @govuk-frontend/label
+    npm update @govuk-frontend/
 
 ## Contribution
 

@@ -1,81 +1,16 @@
-# Fieldset
-
 ## Introduction
 
-The fieldset element is used to group several controls within a web form. The legend element represents a caption for the content of its parent fieldset.
+## Examples
 
-## Guidance
-
-Find out when to use the Fieldset component in your service in the [GOV.UK Design System](https://govuk-design-system-production.cloudapps.digital/components/fieldset).
-
-## Quick start examples
-
-### Component default
-
-[Preview the fieldset component](http://govuk-frontend-review.herokuapp.com/components/fieldset/preview)
-
-#### Markup
-
-    <div class="govuk-o-form-group">
-      <fieldset class="govuk-c-fieldset">
-
-        <legend class="govuk-c-fieldset__legend">
-          What is your address?
-
-          <span class="govuk-c-fieldset__hint">For example, 10 Downing Street</span>
-
-        </legend>
-
-      </fieldset>
-    </div>
-
-#### Macro
-
-    {{ govukFieldset({
-      "legendText": "What is your address?",
-      "legendHintText": "For example, 10 Downing Street"
-    }) }}
-
-### Fieldset--with-error-message
-
-[Preview the fieldset--with-error-message example](http://govuk-frontend-review.herokuapp.com/components/fieldset/with-error-message/preview)
-
-#### Markup
-
-    <div class="govuk-o-form-group govuk-o-form-group--error">
-      <fieldset class="govuk-c-fieldset">
-
-        <legend class="govuk-c-fieldset__legend">
-          What is your address?
-
-          <span class="govuk-c-fieldset__hint">For example, 10 Downing Street</span>
-
-          <span class="govuk-c-error-message">
-          Please fill in the street input
-        </span>
-
-        </legend>
-
-      </fieldset>
-    </div>
-
-#### Macro
-
-    {{ govukFieldset({
-      "legendText": "What is your address?",
-      "legendHintText": "For example, 10 Downing Street",
-      "errorMessage": {
-        "text": "Please fill in the street input"
-      }
-    }) }}
+Find out when to use the component in your service in the [GOV.UK Design System](https://govuk-design-system-production.cloudapps.digital/components/) .
 
 ## Dependencies
 
-To consume the fieldset component you must be running npm version 5 or above.
+To consume the component you must be running npm version 5 or above.
 
 ## Installation
 
-    npm install --save @govuk-frontend/fieldset
+    npm install --save @govuk-frontend/
 
 ## Requirements
 
@@ -219,11 +154,11 @@ Below is an example setup using express configure views:
 
 To check whether you have the latest version of the button run:
 
-    npm outdated @govuk-frontend/fieldset
+    npm outdated @govuk-frontend/
 
 To update the latest version run:
 
-    npm update @govuk-frontend/fieldset
+    npm update @govuk-frontend/
 
 ## Contribution
 

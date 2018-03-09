@@ -1,44 +1,16 @@
-# Panel
-
 ## Introduction
 
-The confirmation panel has a turquoise background and white text. Used for transaction end pages, and Bank Holidays.
+## Examples
 
-## Guidance
-
-Find out when to use the Panel component in your service in the [GOV.UK Design System](https://govuk-design-system-production.cloudapps.digital/components/panel).
-
-## Quick start examples
-
-### Component default
-
-[Preview the panel component](http://govuk-frontend-review.herokuapp.com/components/panel/preview)
-
-#### Markup
-
-    <div class="govuk-c-panel govuk-c-panel--confirmation">
-      <h2 class="govuk-c-panel__title">
-        Application complete
-      </h2>
-      <div class="govuk-c-panel__body">
-        Your reference number: HDJ2123F
-      </div>
-    </div>
-
-#### Macro
-
-    {{ govukPanel({
-      "titleText": "Application complete",
-      "text": "Your reference number: HDJ2123F"
-    }) }}
+Find out when to use the component in your service in the [GOV.UK Design System](https://govuk-design-system-production.cloudapps.digital/components/) .
 
 ## Dependencies
 
-To consume the panel component you must be running npm version 5 or above.
+To consume the component you must be running npm version 5 or above.
 
 ## Installation
 
-    npm install --save @govuk-frontend/panel
+    npm install --save @govuk-frontend/
 
 ## Requirements
 
@@ -170,11 +142,11 @@ Below is an example setup using express configure views:
 
 To check whether you have the latest version of the button run:
 
-    npm outdated @govuk-frontend/panel
+    npm outdated @govuk-frontend/
 
 To update the latest version run:
 
-    npm update @govuk-frontend/panel
+    npm update @govuk-frontend/
 
 ## Contribution
 

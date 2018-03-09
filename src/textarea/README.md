@@ -1,135 +1,16 @@
-# Textarea
-
 ## Introduction
 
-A multi-line text field.
+## Examples
 
-## Guidance
-
-Find out when to use the Textarea component in your service in the [GOV.UK Design System](https://govuk-design-system-production.cloudapps.digital/components/textarea).
-
-## Quick start examples
-
-### Component default
-
-[Preview the textarea component](http://govuk-frontend-review.herokuapp.com/components/textarea/preview)
-
-#### Markup
-
-    <div class="govuk-o-form-group"><label class="govuk-c-label" for="more-detail">
-      Can you provide more detail?
-
-      <span class="govuk-c-label__hint">
-        Don&#39;t include personal or financial information, eg your National Insurance number or credit card details.
-      </span>
-
-    </label>
-    <textarea id="more-detail" name="more-detail" rows="5" class="govuk-c-textarea"></textarea>
-
-    </div>
-
-#### Macro
-
-    {{ govukTextarea({
-      "name": "more-detail",
-      "id": "more-detail",
-      "label": {
-        "text": "Can you provide more detail?",
-        "hintText": "Don't include personal or financial information, eg your National Insurance number or credit card details."
-      }
-    }) }}
-
-### Textarea--with error message
-
-[Preview the textarea--with error message example](http://govuk-frontend-review.herokuapp.com/components/textarea/with error message/preview)
-
-#### Markup
-
-    <div class="govuk-o-form-group govuk-o-form-group--error"><label class="govuk-c-label" for="no-ni-reason">
-      Why can&#39;t you provide a National Insurance number?
-
-      <span class="govuk-c-error-message">
-      You must provide an explanation
-    </span>
-
-    </label>
-    <textarea id="no-ni-reason" name="no-ni-reason" rows="5" class="govuk-c-textarea govuk-c-textarea--error"></textarea>
-
-    </div>
-
-#### Macro
-
-    {{ govukTextarea({
-      "name": "no-ni-reason",
-      "id": "no-ni-reason",
-      "label": {
-        "text": "Why can't you provide a National Insurance number?"
-      },
-      "errorMessage": {
-        "text": "You must provide an explanation"
-      }
-    }) }}
-
-### Textarea--with default value
-
-[Preview the textarea--with default value example](http://govuk-frontend-review.herokuapp.com/components/textarea/with default value/preview)
-
-#### Markup
-
-    <div class="govuk-o-form-group"><label class="govuk-c-label" for="full-address">
-      Full address
-
-    </label>
-    <textarea id="full-address" name="address" rows="5" class="govuk-c-textarea">221B Baker Street
-    London
-    NW1 6XE
-    </textarea>
-
-    </div>
-
-#### Macro
-
-    {{ govukTextarea({
-      "id": "full-address",
-      "name": "address",
-      "value": "221B Baker Street\nLondon\nNW1 6XE\n",
-      "label": {
-        "text": "Full address"
-      }
-    }) }}
-
-### Textarea--with custom rows
-
-[Preview the textarea--with custom rows example](http://govuk-frontend-review.herokuapp.com/components/textarea/with custom rows/preview)
-
-#### Markup
-
-    <div class="govuk-o-form-group"><label class="govuk-c-label" for="full-address">
-      Full address
-
-    </label>
-    <textarea id="full-address" name="address" rows="8" class="govuk-c-textarea"></textarea>
-
-    </div>
-
-#### Macro
-
-    {{ govukTextarea({
-      "id": "full-address",
-      "name": "address",
-      "label": {
-        "text": "Full address"
-      },
-      "rows": 8
-    }) }}
+Find out when to use the component in your service in the [GOV.UK Design System](https://govuk-design-system-production.cloudapps.digital/components/) .
 
 ## Dependencies
 
-To consume the textarea component you must be running npm version 5 or above.
+To consume the component you must be running npm version 5 or above.
 
 ## Installation
 
-    npm install --save @govuk-frontend/textarea
+    npm install --save @govuk-frontend/
 
 ## Requirements
 
@@ -285,11 +166,11 @@ Below is an example setup using express configure views:
 
 To check whether you have the latest version of the button run:
 
-    npm outdated @govuk-frontend/textarea
+    npm outdated @govuk-frontend/
 
 To update the latest version run:
 
-    npm update @govuk-frontend/textarea
+    npm update @govuk-frontend/
 
 ## Contribution
 

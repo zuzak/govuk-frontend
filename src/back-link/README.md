@@ -1,37 +1,16 @@
-# Back link
-
 ## Introduction
 
-Link back component, to go back a page.
+## Examples
 
-## Guidance
-
-Find out when to use the Back link component in your service in the [GOV.UK Design System](https://govuk-design-system-production.cloudapps.digital/components/back-link).
-
-## Quick start examples
-
-### Component default
-
-[Preview the back-link component](http://govuk-frontend-review.herokuapp.com/components/back-link/preview)
-
-#### Markup
-
-    <a href="https://gov.uk" class="govuk-c-back-link">Back</a>
-
-#### Macro
-
-    {{ govukBackLink({
-      "href": "https://gov.uk",
-      "text": "Back"
-    }) }}
+Find out when to use the component in your service in the [GOV.UK Design System](https://govuk-design-system-production.cloudapps.digital/components/) .
 
 ## Dependencies
 
-To consume the back-link component you must be running npm version 5 or above.
+To consume the component you must be running npm version 5 or above.
 
 ## Installation
 
-    npm install --save @govuk-frontend/back-link
+    npm install --save @govuk-frontend/
 
 ## Requirements
 
@@ -151,11 +130,11 @@ Below is an example setup using express configure views:
 
 To check whether you have the latest version of the button run:
 
-    npm outdated @govuk-frontend/back-link
+    npm outdated @govuk-frontend/
 
 To update the latest version run:
 
-    npm update @govuk-frontend/back-link
+    npm update @govuk-frontend/
 
 ## Contribution
 

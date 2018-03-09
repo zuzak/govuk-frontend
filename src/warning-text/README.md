@@ -1,43 +1,16 @@
-# Warning text
-
 ## Introduction
 
-Use bold text with an exclamation icon if there are consequences - for example, a fine or prison sentence.
+## Examples
 
-## Guidance
-
-Find out when to use the Warning text component in your service in the [GOV.UK Design System](https://govuk-design-system-production.cloudapps.digital/components/warning-text).
-
-## Quick start examples
-
-### Component default
-
-[Preview the warning-text component](http://govuk-frontend-review.herokuapp.com/components/warning-text/preview)
-
-#### Markup
-
-    <div class="govuk-c-warning-text">
-      <span class="govuk-c-warning-text__icon govuk-o-circle" aria-hidden="true">!</span>
-      <strong class="govuk-c-warning-text__text">
-        <span class="govuk-c-warning-text__assistive">Warning</span>
-        You can be fined up to £5,000 if you don’t register.
-      </strong>
-    </div>
-
-#### Macro
-
-    {{ govukWarningText({
-      "text": "You can be fined up to £5,000 if you don’t register.",
-      "iconFallbackText": "Warning"
-    }) }}
+Find out when to use the component in your service in the [GOV.UK Design System](https://govuk-design-system-production.cloudapps.digital/components/) .
 
 ## Dependencies
 
-To consume the warning-text component you must be running npm version 5 or above.
+To consume the component you must be running npm version 5 or above.
 
 ## Installation
 
-    npm install --save @govuk-frontend/warning-text
+    npm install --save @govuk-frontend/
 
 ## Requirements
 
@@ -157,11 +130,11 @@ Below is an example setup using express configure views:
 
 To check whether you have the latest version of the button run:
 
-    npm outdated @govuk-frontend/warning-text
+    npm outdated @govuk-frontend/
 
 To update the latest version run:
 
-    npm update @govuk-frontend/warning-text
+    npm update @govuk-frontend/
 
 ## Contribution
 

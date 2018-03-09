@@ -1,38 +1,16 @@
-# Error message
-
 ## Introduction
 
-Component to show a red error message - used for form validation. Use inside a label or legend.
+## Examples
 
-## Guidance
-
-Find out when to use the Error message component in your service in the [GOV.UK Design System](https://govuk-design-system-production.cloudapps.digital/components/error-message).
-
-## Quick start examples
-
-### Component default
-
-[Preview the error-message component](http://govuk-frontend-review.herokuapp.com/components/error-message/preview)
-
-#### Markup
-
-    <span class="govuk-c-error-message">
-      Error message about full name goes here
-    </span>
-
-#### Macro
-
-    {{ govukErrorMessage({
-      "text": "Error message about full name goes here"
-    }) }}
+Find out when to use the component in your service in the [GOV.UK Design System](https://govuk-design-system-production.cloudapps.digital/components/) .
 
 ## Dependencies
 
-To consume the error-message component you must be running npm version 5 or above.
+To consume the component you must be running npm version 5 or above.
 
 ## Installation
 
-    npm install --save @govuk-frontend/error-message
+    npm install --save @govuk-frontend/
 
 ## Requirements
 
@@ -140,11 +118,11 @@ Below is an example setup using express configure views:
 
 To check whether you have the latest version of the button run:
 
-    npm outdated @govuk-frontend/error-message
+    npm outdated @govuk-frontend/
 
 To update the latest version run:
 
-    npm update @govuk-frontend/error-message
+    npm update @govuk-frontend/
 
 ## Contribution
 
