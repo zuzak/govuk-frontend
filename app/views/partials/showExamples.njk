@@ -1,7 +1,7 @@
 {% from "loadComponentTemplate.njk" import loadComponentTemplate %}
 {% from "details/macro.njk" import govukDetails %}
 
-{% macro showExamples(componentName, componentData) %}
+{% macro showExamples(componentName, componentMacroName, componentData) %}
 
 {% for item in componentData.examples %}
 

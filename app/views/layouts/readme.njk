@@ -22,7 +22,7 @@
 
 {% from "showExamples.njk" import showExamples %}
 {% block examples %}
-{{ showExamples(componentName, componentData) }}
+{{ showExamples(componentName, componentMacroName, componentData) }}
 {% endblock %}
 
 <h2>Dependencies</h2>

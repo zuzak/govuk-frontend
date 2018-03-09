@@ -6,7 +6,7 @@ const path = require('path')
 const port = (process.env.PORT || 3000)
 const yaml = require('js-yaml')
 
-const helperFunctions = require('../lib/helper-functions')
+const { componentNameToMacroName } = require('../lib/helper-functions')
 const directoryToObject = require('../lib/directory-to-object')
 const configPaths = require('../config/paths.json')
 
@@ -45,9 +45,6 @@ let env = nunjucks.configure(appViews, {
   lstripBlocks: true, // automatically remove leading whitespace from a block/tag
   watch: true // reload templates when they are changed. needs chokidar dependency to be installed
 })
-
-// make the function available as a filter for all templates
-env.addFilter('componentNameToMacroName', helperFunctions.componentNameToMacroName)
 
 // Set view engine
 app.set('view engine', 'njk')
@@ -99,6 +96,7 @@ app.get('/components/:component', function (req, res, next) {
   res.render('component.njk', {
     data: getComponentData(componentName),
     name: componentName,
+    macroName: componentNameToMacroName(componentName),
     title: titlecase(componentName)
   })
 })
@@ -119,7 +117,7 @@ app.get('/components/:component/:example*?/preview', function (req, res, next) {
   }
 
   // Construct and evaluate the component with the data for this example
-  let macroName = helperFunctions.componentNameToMacroName(componentName)
+  let macroName = componentNameToMacroName(componentName)
   let macroParameters = JSON.stringify(exampleConfig.data, null, '\t')
 
   let componentView = env.renderString(

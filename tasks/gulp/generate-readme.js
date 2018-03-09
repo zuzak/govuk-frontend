@@ -11,7 +11,7 @@ const gulpNunjucks = require('gulp-nunjucks')
 const nunjucks = require('nunjucks')
 const objectData = {}
 const yaml = require('js-yaml')
-const helperFunctions = require('../../lib/helper-functions.js')
+const { componentNameToMacroName } = require('../../lib/helper-functions.js')
 
 // data variable to be passed to the nunjucks template
 function getDataForFile (file) {
@@ -24,8 +24,6 @@ var environment = new nunjucks.Environment(
   new nunjucks.FileSystemLoader([configPath.partials, configPath.layouts, configPath.src])
 )
 environment.addGlobal('isReadme', 'true')
-// make the function above available as a filter for all templates
-environment.addFilter('componentNameToMacroName', helperFunctions.componentNameToMacroName)
 
 gulp.task('generate:readme', () => {
   return gulp.src([configPath.src + '**/index.njk'])
@@ -35,6 +33,7 @@ gulp.task('generate:readme', () => {
       let componentPath = path.join(configPath.src, objectData.componentName, `${objectData.componentName}.yaml`)
       let componentData = yaml.safeLoad(fs.readFileSync(componentPath, 'utf8'), {json: true})
       objectData.componentData = componentData
+      objectData.componentMacroName = componentNameToMacroName(objectData.componentName)
       return componentData
     } catch (e) {
       console.log('ENOENT: no such file or directory: ', file)
