@@ -10,6 +10,19 @@ const helperFunctions = require('../lib/helper-functions')
 const directoryToObject = require('../lib/directory-to-object')
 const configPaths = require('../config/paths.json')
 
+// Read the component data from its YAML file
+function getComponentData (name) {
+  let yamlPath = configPaths.src + `${name}/${name}.yaml`
+
+  try {
+    return yaml.safeLoad(
+      fs.readFileSync(yamlPath, 'utf8'), { json: true }
+    )
+  } catch (error) {
+    throw new Error(error)
+  }
+}
+
 // Set up views
 const appViews = [
   configPaths.layouts,
@@ -65,27 +78,14 @@ app.get('/', function (req, res) {
   })
 })
 
-// Whenever the route includes a :component parameter, read the component data
-// from its YAML file
-app.param('component', function (req, res, next, componentName) {
-  let yamlPath = configPaths.src + `${componentName}/${componentName}.yaml`
-
-  try {
-    res.locals.componentData = yaml.safeLoad(
-      fs.readFileSync(yamlPath, 'utf8'), { json: true }
-    )
-    next()
-  } catch (e) {
-    next(new Error('failed to load component YAML file'))
-  }
-})
-
 // Component 'README' page
 app.get('/components/:component', function (req, res, next) {
   // make variables available to nunjucks template
-  res.locals.componentPath = req.params.component
+  let componentName = req.params.component
+  res.locals.componentData = getComponentData(componentName)
+  res.locals.componentPath = componentName
 
-  res.render(`${req.params.component}/index`, function (error, html) {
+  res.render(`${componentName}/index`, function (error, html) {
     if (error) {
       next(error)
     } else {
@@ -98,9 +98,10 @@ app.get('/components/:component', function (req, res, next) {
 app.get('/components/:component/:example*?/preview', function (req, res, next) {
   // Find the data for the specified example (or the default example)
   let componentName = req.params.component
-  let requestedExampleName = req.params.example || 'default'
+  let componentData = getComponentData(componentName)
 
-  let exampleConfig = res.locals.componentData.examples.find(
+  let requestedExampleName = req.params.example || 'default'
+  let exampleConfig = componentData.examples.find(
     example => example.name === requestedExampleName
   )
 
@@ -116,6 +117,7 @@ app.get('/components/:component/:example*?/preview', function (req, res, next) {
     `{% from '${componentName}/macro.njk' import ${macroName} %}
     {{ ${macroName}(${macroParameters}) }}`
   )
+  res.locals.componentData = componentData
 
   let bodyClasses = ''
   if (req.query.iframe) {
