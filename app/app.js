@@ -92,7 +92,7 @@ app.get('/components/:component', function (req, res, next) {
   res.locals.componentName = componentName
   res.locals.componentNameHuman = titlecase(componentName)
 
-  res.render(`${componentName}/index`, function (error, html) {
+  res.render('component.njk', function (error, html) {
     if (error) {
       next(error)
     } else {
