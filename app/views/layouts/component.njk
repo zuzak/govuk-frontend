@@ -1,27 +1,18 @@
 {% extends "layout-debug.njk" %}
 
-{% block content %}
-
-{% set componentNameHuman = componentName | replace("-", " ") | capitalize %}
-
 {% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "showExamples.njk" import showExamples %}
 
-{{ govukBreadcrumbs({
-  "items": [
-    { text: 'GOV.UK Frontend', href: '/' },
-    { text: componentNameHuman }
-  ]
-}) }}
-<div class="govuk-o-main-wrapper">
-  <h1 class="govuk-heading-xl">
-  {% block componentName %}
-  {{ componentNameHuman }}
-  {% endblock %}
-  </h1>
+{% block content %}
+  {{ govukBreadcrumbs({
+    "items": [
+      { text: 'GOV.UK Frontend', href: '/' },
+      { text: componentNameHuman }
+    ]
+  }) }}
 
-  {% from "showExamples.njk" import showExamples %}
-  {% block examples %}
-  {{ showExamples(componentName, componentData) }}
-  {% endblock %}
-
+  <div class="govuk-o-main-wrapper">
+    <h1 class="govuk-heading-xl">{{ componentNameHuman }}</h1>
+    {{ showExamples(componentName, componentData) }}
+  </div>
 {% endblock %}

@@ -23,6 +23,11 @@ function getComponentData (name) {
   }
 }
 
+function titlecase (string) {
+  string = string.replace('-', ' ')
+  return string.charAt(0).toUpperCase() + string.slice(1)
+}
+
 // Set up views
 const appViews = [
   configPaths.layouts,
@@ -80,10 +85,12 @@ app.get('/', function (req, res) {
 
 // Component 'README' page
 app.get('/components/:component', function (req, res, next) {
-  // make variables available to nunjucks template
   let componentName = req.params.component
+
+  // make variables available to nunjucks template
   res.locals.componentData = getComponentData(componentName)
   res.locals.componentName = componentName
+  res.locals.componentNameHuman = titlecase(componentName)
 
   res.render(`${componentName}/index`, function (error, html) {
     if (error) {
