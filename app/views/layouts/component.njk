@@ -3,7 +3,6 @@
 {% block content %}
 
 {% set componentNameHuman = componentName | replace("-", " ") | capitalize %}
-{% set componentGuidanceLink = componentGuidanceLink | default('https://govuk-design-system-production.cloudapps.digital/components/' + componentName)%}
 
 {% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
 
