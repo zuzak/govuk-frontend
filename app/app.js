@@ -63,6 +63,15 @@ const server = app.listen(port, () => {
   console.log('Listening on port ' + port + '   url: http://localhost:' + port)
 })
 
+// Disallow search index indexing
+app.use(function (req, res, next) {
+  // none - Equivalent to noindex, nofollow
+  // noindex - Do not show this page in search results and do not show a "Cached" link in search results.
+  // nofollow - Do not follow the links on this page
+  res.setHeader('X-Robots-Tag', 'none')
+  next()
+})
+
 // Define routes
 
 // Index page - render the component list template
@@ -139,15 +148,6 @@ app.get('/examples/:example', function (req, res, next) {
       res.send(html)
     }
   })
-})
-
-// Disallow search index indexing
-app.use(function (req, res, next) {
-  // none - Equivalent to noindex, nofollow
-  // noindex - Do not show this page in search results and do not show a "Cached" link in search results.
-  // nofollow - Do not follow the links on this page
-  res.setHeader('X-Robots-Tag', 'none')
-  next()
 })
 
 app.get('/robots.txt', function (req, res) {
