@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "name": "all",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "node-sass --include-path=node_modules application.scss > application.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@govuk-frontend/all": "0.0.26-alpha"
+  },
+  "devDependencies": {
+    "node-sass": "^4.8.1"
+  }
+}
