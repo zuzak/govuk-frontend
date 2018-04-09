@@ -25,6 +25,7 @@ Breaking changes:
   update it to reference the new variable $govuk-is-ie8 – see the README for
   details.
   (PR [#631](https://github.com/alphagov/govuk-frontend/pull/631))
+- Update SassMQ import path (PR [#637](https://github.com/alphagov/govuk-frontend/pull/637))
 
 Fixes:
 - Link styles, as well as links within the  back-link, breadcrumbs, button,
