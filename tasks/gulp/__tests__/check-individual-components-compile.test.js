@@ -25,7 +25,7 @@ describe('Individual components', () => {
     const getSassRenders = () => {
       return componentNames.map(name => {
         const filePath = path.join(configPaths.src, name, `_${name}.scss`)
-        return sassRender({ file: filePath })
+        return sassRender({ file: filePath, includePaths: [ configPaths.src, 'node_modules' ] })
       })
     }
 

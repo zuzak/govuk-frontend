@@ -8,7 +8,7 @@ const sass = require('node-sass')
 const sassRender = util.promisify(sass.render)
 
 const sassConfig = {
-  includePaths: [ configPaths.src ],
+  includePaths: [ configPaths.src, 'node_modules' ],
   outputStyle: 'compressed'
 }
 
