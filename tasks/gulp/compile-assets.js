@@ -38,7 +38,9 @@ const compileOldIeStyleshet = isDist ? configPaths.app + 'assets/scss/govuk-fron
 gulp.task('scss:compile', () => {
   let compile = gulp.src(compileStyleshet)
     .pipe(plumber(errorHandler))
-    .pipe(sass())
+    .pipe(sass({
+      includePaths: 'node_modules'
+    }))
     // minify css add vendor prefixes and normalize to compiled css
     .pipe(gulpif(isDist, postcss([
       autoprefixer,
@@ -60,7 +62,9 @@ gulp.task('scss:compile', () => {
 
   let compileOldIe = gulp.src(compileOldIeStyleshet)
     .pipe(plumber(errorHandler))
-    .pipe(sass())
+    .pipe(sass({
+      includePaths: 'node_modules'
+    }))
     // minify css add vendor prefixes and normalize to compiled css
     .pipe(gulpif(isDist, postcss([
       autoprefixer,
