@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "cd ../../packages/back-link && yarn link && cd ../../examples/using-yarn-workspaces && yarn link '@govuk-frontend/back-link' && cd packages/example-package && yarn build"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "yarn": "^1.5.1"
+  }
+}
