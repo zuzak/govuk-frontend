@@ -29,6 +29,9 @@
   },
   "devDependencies": {
     "autoprefixer": "^7.1.1",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-es3": "^1.0.1",
     "cheerio": "^1.0.0-rc.2",
     "cssnano": "^3.10.0",
     "directory-to-object": "^1.1.1",
