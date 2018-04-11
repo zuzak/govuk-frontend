@@ -7,6 +7,9 @@
  * Usage instructions:
  * the 'polyfill' will be automatically initialised
  */
+import '../globals/polyfills/object/defineProperty'
+import '../globals/polyfills/bind'
+
 import { addEvent, removeEvent, charCode, preventDefault } from '../globals/common'
 
 var KEY_ENTER = 13
