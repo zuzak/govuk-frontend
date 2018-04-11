@@ -85,4 +85,16 @@
   .govuk-list--description {
     @extend %govuk-list--description;
   }
+
+  %govuk-list--description-inverted > dt {
+    @include govuk-font-regular;
+  }
+
+  %govuk-list--description-inverted > dd {
+    @include govuk-font-bold;
+  }
+
+  .govuk-list--description-inverted {
+    @extend %govuk-list--description-inverted;
+  }
 }
