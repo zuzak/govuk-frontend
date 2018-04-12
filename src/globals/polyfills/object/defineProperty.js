@@ -1,7 +1,7 @@
 (function(undefined) {
 
 // https://github.com/Financial-Times/polyfill-service/blob/master/packages/polyfill-library/polyfills/Object/defineProperty/detect.js
-var hasDefineProperty = (
+var detect = (
   // In IE8, defineProperty could only act on DOM elements, so full support
   // for the feature requires the ability to set a property on an arbitrary object
   'defineProperty' in Object && (function() {
@@ -15,13 +15,7 @@ var hasDefineProperty = (
   }())
 )
 
-console.log('init defineProperty')
-
-if (hasDefineProperty) {
-  return;
-}
-
-console.log('polyfill define pls')
+if (detect) return
 
 // https://github.com/Financial-Times/polyfill-service/blob/master/packages/polyfill-library/polyfills/Object/defineProperty/polyfill.js
 // Object.defineProperty
