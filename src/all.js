@@ -6,9 +6,13 @@ import ErrorSummary from './components/error-summary/error-summary'
 import Header from './components/header/header'
 import Radios from './components/radios/radios'
 
-export function initAll () {
-  new Button().init()
-  new Details().init()
+function initAll () {
+  new Button(document).init()
+
+  var $details = document.querySelectorAll('details')
+  nodeListForEach($details, function ($detail) {
+    new Details($detail).init()
+  })
 
   var $checkboxes = document.querySelectorAll('[data-module="checkboxes"]')
   nodeListForEach($checkboxes, function ($checkbox) {
@@ -29,4 +33,12 @@ export function initAll () {
   })
 }
 
-(initAll())
+export {
+  initAll,
+  Button,
+  Details,
+  Checkboxes,
+  ErrorSummary,
+  Header,
+  Radios
+}

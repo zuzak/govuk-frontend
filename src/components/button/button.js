@@ -8,11 +8,14 @@
  * Usage instructions:
  * the 'shim' will be automatically initialised
  */
-import { addEvent, charCode, preventDefault } from '../../common'
+import '../../vendor/polyfills/Event' // addEventListener and event.target normaliziation
 
 var KEY_SPACE = 32
 
-function Button () { }
+function Button ($module) {
+  // Default to applying this to everything in the document if no $module specified.
+  this.$module = $module
+}
 
 /**
 * Add event handler for KeyDown
@@ -21,13 +24,11 @@ function Button () { }
 * @param {object} event event
 */
 Button.prototype.handleKeyDown = function (event) {
-  // get the target element
-  var target = event.target || event.srcElement
   // if the element has a role='button' and the pressed key is a space, we'll simulate a click
-  if (target.getAttribute('role') === 'button' && charCode(event) === KEY_SPACE) {
-    preventDefault(event)
+  if (event.target.getAttribute('role') === 'button' && event.keyCode === KEY_SPACE) {
+    event.preventDefault()
     // trigger the target's click event
-    target.click()
+    event.target.click()
   }
 }
 
@@ -36,7 +37,7 @@ Button.prototype.handleKeyDown = function (event) {
 * this will help listening for later inserted elements with a role="button"
 */
 Button.prototype.init = function () {
-  addEvent(document, 'keydown', this.handleKeyDown)
+  this.$module.addEventListener('keydown', this.handleKeyDown)
 }
 
 export default Button
