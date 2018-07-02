@@ -4,10 +4,15 @@
 
 @include govuk-exports("govuk/component/tag") {
   .govuk-tag {
-    @include govuk-font($size: 16, $weight: bold, $line-height: 1.25);
+    @include govuk-font($size: 16, $weight: bold, $line-height: 1);
 
     display: inline-block;
-    padding: govuk-spacing(1) 8px 0;
+    padding-top: .3125em;
+    padding-right: .3125em;
+    padding-bottom: .125em;
+    padding-left: .3125em;
+
+    border: .125em solid govuk-colour("blue");
 
     color: govuk-colour("white");
     background-color: govuk-colour("blue");
