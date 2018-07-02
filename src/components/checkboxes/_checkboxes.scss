@@ -102,7 +102,7 @@
 
   // Focused state
   .govuk-checkboxes__input:focus + .govuk-checkboxes__label::before {
-    box-shadow: 0 0 0 $govuk-focus-width $govuk-focus-colour;
+    outline: $govuk-focus-width solid $govuk-focus-colour;
   }
 
   // Selected state
