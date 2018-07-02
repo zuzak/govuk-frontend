@@ -99,7 +99,12 @@
 
   // Focused state
   .govuk-radios__input:focus + .govuk-radios__label::before {
-    box-shadow: 0 0 0 4px $govuk-focus-colour;
+    top: -($govuk-focus-width);
+    left: -($govuk-focus-width);
+    width: $govuk-radios-size + ($govuk-focus-width * 2);
+    height: $govuk-radios-size + ($govuk-focus-width * 2);
+    border: $govuk-focus-width solid $govuk-focus-colour;
+    box-shadow: inset 0 0 0 $govuk-border-width-form-element currentColor;
   }
 
   // Selected state
