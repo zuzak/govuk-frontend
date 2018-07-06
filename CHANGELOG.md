@@ -20,6 +20,12 @@
 
   ([PR #N](https://github.com/alphagov/govuk-frontend/pull/N))
 
+- Allow additional classes to be added to the radio and checkbox items
+
+  You can now provide `label: { classes: 'extra-class' }` to each item.
+
+  ([PR #880](https://github.com/alphagov/govuk-frontend/pull/880))
+
 🔧 Fixes:
 
 - Pull Request Title goes here
