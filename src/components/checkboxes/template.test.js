@@ -282,6 +282,25 @@ describe('Checkboxes', () => {
     expect($lastConditional.html()).toContain('Conditional content')
   })
 
+  it('render additional label classes', () => {
+    const $ = render('radios', {
+      name: 'example-label-classes',
+      items: [
+        {
+          value: 'yes',
+          text: 'Yes',
+          label: {
+            classes: 'bold'
+          }
+        }
+      ]
+    })
+
+    const $component = $('.govuk-radios')
+    const $label = $component.find('.govuk-radios__item label')
+    expect($label.hasClass('bold')).toBeTruthy()
+  })
+
   describe('when they include an error message', () => {
     it('renders the error message', () => {
       const $ = render('checkboxes', examples['with all fieldset attributes'])
