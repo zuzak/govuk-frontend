@@ -224,6 +224,25 @@ describe('Radios', () => {
       expect($lastConditional.attr('id')).toBe('conditional-example-conditional-2')
       expect($lastConditional.html()).toContain('Conditional content')
     })
+
+    it('render additional label classes', () => {
+      const $ = render('radios', {
+        name: 'example-label-classes',
+        items: [
+          {
+            value: 'yes',
+            text: 'Yes',
+            label: {
+              classes: 'bold'
+            }
+          }
+        ]
+      })
+
+      const $component = $('.govuk-radios')
+      const $label = $component.find('.govuk-radios__item label')
+      expect($label.hasClass('bold')).toBeTruthy()
+    })
   })
 
   describe('when they include a hint', () => {

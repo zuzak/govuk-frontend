@@ -656,7 +656,7 @@ If you are using Nunjucks,then macros take the following arguments
 
 <td class="govuk-table__cell ">No</td>
 
-<td class="govuk-table__cell ">Provide additional attributes to each radio item label. See `label` component for more details.</td>
+<td class="govuk-table__cell ">Provide additional attributes and classes to each radio item label. See `label` component for more details.</td>
 
 </tr>
 
