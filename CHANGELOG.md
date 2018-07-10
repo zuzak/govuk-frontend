@@ -20,6 +20,11 @@
 
   ([PR #N](https://github.com/alphagov/govuk-frontend/pull/N))
 
+- Allow og:image meta tag url to be set independantly
+  Image url for the opengraph image needs to be absolute and
+  can now be overwritten by setting the `assetUrl` variable.
+  ([PR #847](https://github.com/alphagov/govuk-frontend/pull/847))
+
 🔧 Fixes:
 
 - Pull Request Title goes here
