@@ -114,6 +114,12 @@
 
   ([PR #845](https://github.com/alphagov/govuk-frontend/pull/845))
 
+- Fix flash of unstyled content with conditional reveals (Radios and Checkboxes)
+
+  If the conditional reveal JavaScript is slow to execute it can result in showing the user their contents briefly which can be jarring.
+
+  ([PR #885](https://github.com/alphagov/govuk-frontend/pull/885))
+
 🏠 Internal:
 
 - Fix Design System url in package READMEs and review app
