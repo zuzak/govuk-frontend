@@ -110,12 +110,12 @@
         padding-left: govuk-spacing(4);
         border: 1px solid $govuk-border-colour;
         border-top: 0;
+
+        &.js-hidden {
+          display: none;
+        }
       }
     }
 
-  }
-
-  .js-hidden {
-    display: none;
   }
 }
