@@ -1,0 +1,5 @@
+@include govuk-exports("govuk/utilities/javascript") {
+  .js-enabled .govuk-js-hidden {
+    display: none !important;
+  }
+}
