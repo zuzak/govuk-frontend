@@ -139,10 +139,6 @@
     padding-left: $conditional-padding-left;
     border-left: $conditional-border-width solid $govuk-border-colour;
 
-    .js-enabled &.js-hidden {
-      display: none;
-    }
-
     & > :last-child {
       margin-bottom: 0;
     }

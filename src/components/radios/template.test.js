@@ -221,7 +221,7 @@ describe('Radios', () => {
 
         const $firstConditional = $component.find('.govuk-radios__conditional').first()
         expect($firstConditional.html()).toContain('Conditional content that should be hidden')
-        expect($firstConditional.hasClass('js-hidden')).toBeTruthy()
+        expect($firstConditional.hasClass('govuk-js-hidden')).toBeTruthy()
       })
       it('visible by default when checked', () => {
         const $ = render('radios', {
@@ -246,7 +246,7 @@ describe('Radios', () => {
 
         const $firstConditional = $component.find('.govuk-radios__conditional').first()
         expect($firstConditional.html()).toContain('Conditional content that should be visible')
-        expect($firstConditional.hasClass('js-hidden')).toBeFalsy()
+        expect($firstConditional.hasClass('govuk-js-hidden')).toBeFalsy()
       })
       it('with association to the input they are controlled by', () => {
         const $ = render('radios', {
