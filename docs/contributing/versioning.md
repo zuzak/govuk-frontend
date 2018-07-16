@@ -7,7 +7,19 @@ When we make changes to this code we need to be sure we communicate this consist
 Semantic versioning is not enough to properly communicate changes to a UI library so this document
 aims to detail what to do in certain circumstances.
 
-## When to version
+If you use this as a point of reference and there are gaps please raise an issue or pull request to improve this document.
+
+## Contents
+
+- [Stability](#stability)
+- [Deprecation](#deprecation)
+- [Migration](#migration)
+- [Public API](#public-api)
+  - [Components](#components)
+    - [Nunjucks Macros](#nunjucks-macros)
+- [Accidental breaking releases](#accidental-breaking-releases)
+
+## Stability
 
 A stable library is more important than a library that is hard to update to.
 
@@ -31,7 +43,7 @@ Ember.JS is a great example of prioritising stability see [Stability without Sta
 
 We do not want our users to be reliant on certain versions of our library with no way forward.
 
-Whenever we decide to make a breaking change we must ensure we do our best to try to first deprecate the feature then allow a migration path.
+Whenever we decide to make a breaking change we must ensure we do our best to try to first deprecate the feature and allow a migration path.
 
 ## Deprecation
 
@@ -61,39 +73,49 @@ It is very important that we make it easy to migrate when we make deprecations.
 
 If possible include this directly in the CHANGELOG entry that introduces the deprecation.
 
-The following examples will have examples of how to deprecate / migrate certain features.
+## Public API
 
-### Colours
+As defined in the [Semantic Versioning specification](https://semver.org/) a defined public api is required to version against.
 
-## Components
+> For this system to work, you first need to declare a public API. This may consist of documentation or be enforced by the code itself.
 
+This section details the different aspects of this libaries' public API, and includes examples of when something is a breaking change.
 
-### Spacing
+### Components
 
-Components that do not nest
-Internal spacing changes are not breaking changes.
+#### HTML
 
-## SCSS
+#### JavaScript
 
-## Macros (Templates)
+#### SCSS
 
-A macro's primary API is based on the options that can be passed.
+#### Nunjucks Macros
 
-Breaking changes
-- An update which adds or removes HTML elements e.g. changing a
-- An update which adds or removes classes
-- Changing a property name
-- Changing the output of the template
-- Changing the path to call it e.g.
-- Changing macro name e.g. 'govukRadios' -> 'govukRadio'
+#### Version on the lowest abstraction
+What happens if we make a breaking change that would not be breaking to users of our macros?
+We should version as if users are using HTML, but make it clear in the CHANGELOG that macro users may not have difficulty updating.
 
-Feature
-- Adding a property name
+Questions:
+- Is the format the easiest to action?
+- Is this only for the internal dev team?
+- Does this need to be extended to what is in the design system?
 
-## Accidental breaking release
+### Extending GOV.UK Frontend
+
+If you are extending a component or building your own, you may use certain parts of the library.
+
+TODO: Flesh this section out.
+
+https://govuk-frontend-review.herokuapp.com/docs/
+https://design-system.service.gov.uk/styles/spacing/
+https://design-system.service.gov.uk/styles/colour/
+
+## Accidental breaking releases
 If a backward-incompatible change is released unintentionally, we will follow the process outlined on semver.org: https://semver.org/#what-do-i-do-if-i-accidentally-release-a-backwards-incompatible-change-as-a-minor-version
 
-It is important to communicate this openly with our users, and create an incident review and work as a team to see if there are
+> As soon as you realize that you’ve broken the Semantic Versioning spec, fix the problem and release a new minor version that corrects the problem and restores backwards compatibility. Even under this circumstance, it is unacceptable to modify versioned releases. If it’s appropriate, document the offending version and inform your users of the problem so that they are aware of the offending version.
+
+If it makes sense to, setup an incident review that allows the team to see if there are
 any steps to avoid this happening again in the future.
 
 Communicate any actions as a result of an incident review, this will ensure our users will see that we take incidents seriously and can avoid some loss of trust.
